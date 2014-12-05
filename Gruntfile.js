@@ -261,16 +261,16 @@ module.exports = function (grunt) {
     },
 
     // The following *-min tasks produce minified files in the dist folder
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.client %>/assets/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= yeoman.dist %>/public/assets/images'
-        }]
-      }
-    },
+    // imagemin: {
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= yeoman.client %>/assets/images',
+    //       src: '{,*/}*.{png,jpg,jpeg,gif}',
+    //       dest: '<%= yeoman.dist %>/public/assets/images'
+    //     }]
+    //   }
+    // },
 
     svgmin: {
       dist: {
@@ -407,25 +407,25 @@ module.exports = function (grunt) {
         }
       },
       dist: [
-        'imagemin',
+        // 'imagemin',
         'svgmin'
       ]
     },
 
     // Test settings
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true
-      }
-    },
+    // karma: {
+    //   unit: {
+    //     configFile: 'karma.conf.js',
+    //     singleRun: true
+    //   }
+    // },
 
-    mochaTest: {
-      options: {
-        reporter: 'spec'
-      },
-      src: ['server/**/*.spec.js']
-    },
+    // mochaTest: {
+    //   options: {
+    //     reporter: 'spec'
+    //   },
+    //   src: ['server/**/*.spec.js']
+    // },
 
     protractor: {
       options: {
@@ -546,46 +546,46 @@ module.exports = function (grunt) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
   });
-
-  grunt.registerTask('test', function(target) {
-    if (target === 'server') {
-      return grunt.task.run([
-        'env:all',
-        'env:test',
-        'mochaTest'
-      ]);
-    }
-
-    else if (target === 'client') {
-      return grunt.task.run([
-        'clean:server',
-        'env:all',
-        'concurrent:test',
-        'injector',
-        'autoprefixer',
-        'karma'
-      ]);
-    }
-
-    else if (target === 'e2e') {
-      return grunt.task.run([
-        'clean:server',
-        'env:all',
-        'env:test',
-        'concurrent:test',
-        'injector',
-        'wiredep',
-        'autoprefixer',
-        'express:dev',
-        'protractor'
-      ]);
-    }
-
-    else grunt.task.run([
-      'test:server',
-      'test:client'
-    ]);
-  });
+  // 
+  // grunt.registerTask('test', function(target) {
+  //   if (target === 'server') {
+  //     return grunt.task.run([
+  //       'env:all',
+  //       'env:test',
+  //       'mochaTest'
+  //     ]);
+  //   }
+  //
+  //   else if (target === 'client') {
+  //     return grunt.task.run([
+  //       'clean:server',
+  //       'env:all',
+  //       'concurrent:test',
+  //       'injector',
+  //       'autoprefixer',
+  //       'karma'
+  //     ]);
+  //   }
+  //
+  //   else if (target === 'e2e') {
+  //     return grunt.task.run([
+  //       'clean:server',
+  //       'env:all',
+  //       'env:test',
+  //       'concurrent:test',
+  //       'injector',
+  //       'wiredep',
+  //       'autoprefixer',
+  //       'express:dev',
+  //       'protractor'
+  //     ]);
+  //   }
+  //
+  //   else grunt.task.run([
+  //     'test:server',
+  //     'test:client'
+  //   ]);
+  // });
 
   grunt.registerTask('build', [
     'clean:dist',

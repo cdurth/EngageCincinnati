@@ -1,0 +1,436 @@
+[4mRunning "serve:dist" (serve) task[24m
+
+[4mRunning "clean:dist" (clean) task[24m
+
+[4mRunning "concurrent:dist" (concurrent) task[24m
+    
+[4mRunning "svgmin:dist" (svgmin) task[24m
+Total saved: 0 B
+
+[32mDone, without errors.[39m
+
+[4mRunning "injector:scripts" (injector) task[24m
+[90mMissing option `template`, using `dest` as template instead[39m
+Injecting [32mjs[39m files [90m(17 files)[39m
+[32m>> [39mNothing changed
+
+[4mRunning "injector:css" (injector) task[24m
+[90mMissing option `template`, using `dest` as template instead[39m
+Injecting [32mcss[39m files [90m(7 files)[39m
+[32m>> [39mNothing changed
+
+[4mRunning "wiredep:target" (wiredep) task[24m
+
+[4mRunning "useminPrepare:html" (useminPrepare) task[24m
+Going through [36mclient/index.html[39m to update the config
+Looking for build script HTML comment blocks
+
+[1mConfiguration is now:[22m
+
+[1m  concat:[22m
+  { generated: 
+   { files: 
+      [ { dest: [32m'.tmp\\concat\\app\\vendor.css'[39m,
+          src: 
+           [ [32m'client\\bower_components\\bootstrap\\dist\\css\\bootstrap.css'[39m,
+             [32m'client\\bower_components\\font-awesome\\css\\font-awesome.css'[39m ] },
+        { dest: [32m'.tmp\\concat\\app\\app.css'[39m,
+          src: 
+           [ [32m'{.tmp,client}\\app\\app.css'[39m,
+             [32m'{.tmp,client}\\app\\account\\login\\login.css'[39m,
+             [32m'{.tmp,client}\\app\\admin\\admin.css'[39m,
+             [32m'{.tmp,client}\\app\\app.css'[39m,
+             [32m'{.tmp,client}\\app\\events\\create\\create.css'[39m,
+             [32m'{.tmp,client}\\app\\events\\events.css'[39m,
+             [32m'{.tmp,client}\\app\\main\\main.css'[39m,
+             [32m'{.tmp,client}\\components\\modal\\modal.css'[39m ] },
+        { dest: [32m'.tmp\\concat\\app\\vendor.js'[39m,
+          src: 
+           [ [32m'{client,node_modules}\\bower_components\\jquery\\dist\\jquery.js'[39m,
+             [32m'{client,node_modules}\\bower_components\\angular\\angular.js'[39m,
+             [32m'{client,node_modules}\\bower_components\\angular-resource\\angular-resource.js'[39m,
+             [32m'{client,node_modules}\\bower_components\\angular-cookies\\angular-cookies.js'[39m,
+             [32m'{client,node_modules}\\bower_components\\angular-sanitize\\angular-sanitize.js'[39m,
+             [32m'{client,node_modules}\\bower_components\\angular-bootstrap\\ui-bootstrap-tpls.js'[39m,
+             [32m'{client,node_modules}\\bower_components\\lodash\\dist\\lodash.compat.js'[39m,
+             [32m'{client,node_modules}\\bower_components\\angular-ui-router\\release\\angular-ui-router.js'[39m ] },
+        { dest: [32m'.tmp\\concat\\app\\app.js'[39m,
+          src: 
+           [ [32m'{.tmp,client}\\app\\app.js'[39m,
+             [32m'{.tmp,client}\\app\\account\\account.js'[39m,
+             [32m'{.tmp,client}\\app\\account\\login\\login.controller.js'[39m,
+             [32m'{.tmp,client}\\app\\account\\settings\\settings.controller.js'[39m,
+             [32m'{.tmp,client}\\app\\account\\signup\\signup.controller.js'[39m,
+             [32m'{.tmp,client}\\app\\admin\\admin.controller.js'[39m,
+             [32m'{.tmp,client}\\app\\admin\\admin.js'[39m,
+             [32m'{.tmp,client}\\app\\events\\create\\create.controller.js'[39m,
+             [32m'{.tmp,client}\\app\\events\\create\\create.js'[39m,
+             [32m'{.tmp,client}\\app\\events\\events.controller.js'[39m,
+             [32m'{.tmp,client}\\app\\events\\events.js'[39m,
+             [32m'{.tmp,client}\\app\\main\\main.controller.js'[39m,
+             [32m'{.tmp,client}\\app\\main\\main.js'[39m,
+             [32m'{.tmp,client}\\components\\auth\\auth.service.js'[39m,
+             [32m'{.tmp,client}\\components\\auth\\user.service.js'[39m,
+             [32m'{.tmp,client}\\components\\modal\\modal.service.js'[39m,
+             [32m'{.tmp,client}\\components\\mongoose-error\\mongoose-error.directive.js'[39m,
+             [32m'{.tmp,client}\\components\\navbar\\navbar.controller.js'[39m ] } ] } }
+
+[1m  uglify:[22m
+  { generated: 
+   { files: 
+      [ { dest: [32m'dist\\public\\app\\vendor.js'[39m,
+          src: [ [32m'.tmp\\concat\\app\\vendor.js'[39m ] },
+        { dest: [32m'dist\\public\\app\\app.js'[39m,
+          src: [ [32m'.tmp\\concat\\app\\app.js'[39m ] } ] } }
+
+[1m  cssmin:[22m
+  { generated: 
+   { files: 
+      [ { dest: [32m'dist\\public\\app\\vendor.css'[39m,
+          src: [ [32m'.tmp\\concat\\app\\vendor.css'[39m ] },
+        { dest: [32m'dist\\public\\app\\app.css'[39m,
+          src: [ [32m'.tmp\\concat\\app\\app.css'[39m ] } ] } }
+
+[4mRunning "autoprefixer:dist" (autoprefixer) task[24m
+
+[4mRunning "ngtemplates:main" (ngtemplates) task[24m
+[33mWarning: Parse Error: <div class="row"
+    <div class="col-lg-12">
+      <h1 class="page-header">Event Listings:</h1>
+<div class="container">
+    <div class="well well-sm">
+        <strong>Display</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                class="glyphicon glyphicon-th"></span>Grid</a>
+        </div>
+    </div>
+    <div id="Events" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- <footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer> -->
+
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+
+    <div class="col-md-6 col-md-offset-3">
+      <form id="search" ng-submit="searchEvents(terms)">
+          <input type="text" class="form-control" ng-model="partyID" placeholder="Search Events">
+          <button class="btn btn-primary search-btn" type="button" ng-click="joinParty(partyID)">Search!</button>
+       </form>
+    </div>
+
+  </div>
+</header>
+
+<div class="container" id="event-wrap">
+  <div class="row"
+    <div class="col-lg-12">
+      <h1 class="page-header">Event Listings:</h1>
+<div class="container">
+    <div class="well well-sm">
+        <strong>Display</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                class="glyphicon glyphicon-th"></span>Grid</a>
+        </div>
+    </div>
+    <div id="Events" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Event title</h4>
+                    <p class="group inner list-group-item-text">
+                        Event description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                Dec. 20, 2014</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">View Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- <footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer> -->
+
+
+ Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2014-12-05 18:29:13 UTC)
+loading tasks       113ms  ■■■ 7%
+concurrent:dist     640ms  ■■■■■■■■■■■■■■■■■ 40%
+injector:scripts     32ms  ■ 2%
+wiredep:target      496ms  ■■■■■■■■■■■■■ 31%
+useminPrepare:html  200ms  ■■■■■■ 12%
+autoprefixer:dist    35ms  ■ 2%
+ngtemplates:main     52ms  ■■ 3%
+Total 1.6s
+

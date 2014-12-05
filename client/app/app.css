@@ -3,7 +3,7 @@ html {
 }
 body {
   background:url('../assets/images/bg.jpg') no-repeat center bottom;
-  background-color:black;
+  background-color:#010101;
   background-size: cover;
 }
 .whitebg {
