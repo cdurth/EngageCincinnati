@@ -1,5 +1,16 @@
+html {
+   min-height: 100%;
+}
+body {
+  background:url('../assets/images/bg.jpg') no-repeat center bottom;
+  background-color:black;
+  background-size: cover;
+}
+.whitebg {
+  background:white;
+}
 #banner {
-  background: #E74C3C;
+  background: #000000;
 }
 #search .form-control {
   width : 67%;
