@@ -7,7 +7,7 @@ angular.module('engageCincinnatiApp')
       'link': '/'
     },{
       'title': 'Events',
-      'link': "/events"
+      'link': '/events'
     }];
 
     $scope.isCollapsed = true;
